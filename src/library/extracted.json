@@ -1,0 +1,111 @@
+{
+  "sizes": {
+    "S": {
+      "book.main": {
+        "file": "library/S/book-main.svg",
+        "w": 722.95,
+        "h": 488.33
+      },
+      "book.bg": {
+        "file": "library/S/book-bg.svg",
+        "w": 722.95,
+        "h": 488.33
+      },
+      "phone.main": {
+        "file": "library/S/phone-main.svg",
+        "w": 398.26,
+        "h": 230.84
+      },
+      "phone.bg": {
+        "file": "library/S/phone-bg.svg",
+        "w": 398.26,
+        "h": 230.84
+      },
+      "puzzle.main": {
+        "file": "library/S/puzzle-main.svg",
+        "w": 272.08,
+        "h": 156.76
+      },
+      "puzzle.bg": {
+        "file": "library/S/puzzle-bg.svg",
+        "w": 272.08,
+        "h": 156.77
+      },
+      "coin.main": {
+        "file": "library/S/coin-main.svg",
+        "w": 152.4,
+        "h": 100.2
+      },
+      "coin.bg": {
+        "file": "library/S/coin-bg.svg",
+        "w": 152.39,
+        "h": 100.21
+      },
+      "headphones.main": {
+        "file": "library/S/headphones-main.svg",
+        "w": 444.07,
+        "h": 345.77
+      },
+      "headphones.bg": {
+        "file": "library/S/headphones-bg.svg",
+        "w": 444.07,
+        "h": 345.77
+      },
+      "lamp.main": {
+        "file": "library/S/lamp-main.svg",
+        "w": 472.97,
+        "h": 564.49
+      },
+      "lamp.bg": {
+        "file": "library/S/lamp-bg.svg",
+        "w": 472.97,
+        "h": 564.49
+      },
+      "flowers.main": {
+        "file": "library/S/flowers-main.svg",
+        "w": 323.27,
+        "h": 408.95
+      },
+      "flowers.bg": {
+        "file": "library/S/flowers-bg.svg",
+        "w": 323.27,
+        "h": 408.95
+      },
+      "wallet.main": {
+        "file": "library/S/wallet-main.svg",
+        "w": 315.21,
+        "h": 198.15
+      },
+      "wallet.bg": {
+        "file": "library/S/wallet-bg.svg",
+        "w": 315.21,
+        "h": 198.16
+      },
+      "folder.main": {
+        "file": "library/S/folder-main.svg",
+        "w": 620.31,
+        "h": 329.29
+      },
+      "folder.bg": {
+        "file": "library/S/folder-bg.svg",
+        "w": 620.31,
+        "h": 329.3
+      },
+      "pen.main": {
+        "file": "library/S/pen-main.svg",
+        "w": 254.21,
+        "h": 142.7
+      },
+      "pen.bg": {
+        "file": "library/S/pen-bg.svg",
+        "w": 254.21,
+        "h": 142.7
+      },
+      "decor": {
+        "file": "library/S/decor.svg",
+        "w": 500,
+        "h": 500
+      }
+    }
+  }
+}
