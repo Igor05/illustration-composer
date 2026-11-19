@@ -3,8 +3,13 @@ import { OBJECTS, type LayoutId } from '../library/catalog';
 export interface Pick { main: string[]; bg: string[]; layout?: LayoutId; reason?: string; source: 'ai' | 'keywords' }
 
 const words = (t: string) => t.toLowerCase().replace(/ё/g, 'е').match(/[a-zа-я0-9]+/g) || [];
-// crude Russian stemming: compare the first 5 letters, enough for "деньги/денег", "учеба/учебы"
-const stem = (w: string) => (w.length > 5 ? w.slice(0, 5) : w);
+// crude Russian stemming: drop a case/number ending, then compare the first 5 letters,
+// so "книгу/книги/книга", "лампы/лампа", "цветов/цветы", "учебы/учеба" all meet
+const ENDING = /(ами|ями|ого|его|ому|ему|ов|ев|ей|ам|ям|ах|ях|ом|ем|ой|ий|ый|ая|яя|ое|ее|ые|ие|а|я|у|ю|ы|и|е|о|ь|й)$/;
+const stem = (w: string) => {
+  const s = w.replace(ENDING, '');
+  return (s.length >= 3 ? s : w).slice(0, 5);
+};
 
 /** Scenario 2: the person lists the objects they want. Order is kept, unknown words are reported back. */
 export function parseObjectList(text: string): { ids: string[]; unknown: string[] } {

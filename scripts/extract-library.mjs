@@ -21,8 +21,21 @@ const OBJECTS = {
     folder:     { main: 'Group 2136136337', bg: 'Group 2136136342' },
     pen:        { main: 'Group 2136136336', bg: 'Group 2136136343' },
   },
+  // In the L export book, pen and folder have proper names; flowers are still unnamed groups.
+  L: {
+    book:       { main: 'Книга',            bg: 'Книга_2' },
+    phone:      { main: 'Телефон',          bg: 'Телефон_2' },
+    puzzle:     { main: 'Пазлы',            bg: 'Пазлы_2' },
+    coin:       { main: 'Монета',           bg: 'Монета_2' },
+    headphones: { main: 'Наушники',         bg: 'Наушники_2' },
+    lamp:       { main: 'Лампа',            bg: 'Лампа_2' },
+    flowers:    { main: 'Group 2136136344', bg: 'Group 2136136347' },
+    wallet:     { main: 'Кошелек',          bg: 'Кошелек_2' },
+    folder:     { main: 'Папка',            bg: 'Папка_2' },
+    pen:        { main: 'Ручка',            bg: 'Ручка_2' },
+  },
 };
-const DECOR = { S: 'конфетти' }; // background confetti inside the first "Фон" square
+const DECOR = { S: 'конфетти', L: 'конфетти' }; // background confetti inside the first "Фон" square
 
 const sizes = Object.keys(OBJECTS).filter((s) => fs.existsSync(path.join(ROOT, 'source', `size-${s}.svg`)));
 const browser = await chromium.launch();
