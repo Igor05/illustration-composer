@@ -13,6 +13,11 @@ import './App.css';
 
 type Mode = 'metaphor' | 'list';
 
+const SIZE_HINT: Record<SizeId, string> = {
+  L: 'Для больших форматов: обложки, баннеры, крупные объекты',
+  S: 'Для мелких форматов: превью, карточки, иконки',
+};
+
 const initial: Composition = {
   size: AVAILABLE_SIZES.includes('L') ? 'L' : AVAILABLE_SIZES[0],
   format: FORMATS[0], palette: PALETTES[0], layout: 'title', scale: 0.5, decor: true, items: [],
@@ -189,7 +194,8 @@ export default function App() {
           <select value={comp.format.id} onChange={(e) => setFormat(e.target.value)}>{FORMATS.map((f) => <option key={f.id} value={f.id}>{f.name}</option>)}</select>
         </label>
         <div className="field"><span>Детализация объектов</span>
-          <div className="seg">{(['L', 'S'] as SizeId[]).map((s) => <button key={s} aria-pressed={comp.size === s} disabled={!AVAILABLE_SIZES.includes(s)} onClick={() => setSize(s)}>Размер {s}</button>)}</div>
+          <div className="seg">{(['L', 'S'] as SizeId[]).map((s) => <button key={s} aria-pressed={comp.size === s} disabled={!AVAILABLE_SIZES.includes(s)} onClick={() => setSize(s)} title={SIZE_HINT[s]}>Размер {s}</button>)}</div>
+          <p className="muted small">L — для больших форматов и крупных объектов: больше деталей. S — для мелких форматов, превью и иконок: меньше деталей, рисунок читается в малом размере.</p>
         </div>
         <div className="field"><span>Цветовая схема</span>
           <div className="swatches">{palettes.map((p) => (
